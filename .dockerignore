@@ -9,7 +9,7 @@ vendor/bundle
 log/
 tmp/
 
-#other
+# other
 .DS_Store
 .dockerignore
 .env
