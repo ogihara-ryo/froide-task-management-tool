@@ -1,0 +1,15 @@
+# git
+.git
+
+# bundler
+.bundle
+vendor/bundle
+
+# rails
+log/
+tmp/
+
+#other
+.DS_Store
+.dockerignore
+.env
