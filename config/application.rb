@@ -26,6 +26,7 @@ module FroideTaskManagementTool
       g.template_engine :slim
       g.assets false
       g.helper false
+      g.test_framework :rspec, view_specs: false
     end
   end
 end
