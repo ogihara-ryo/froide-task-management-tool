@@ -2,6 +2,7 @@ AllCops:
   Exclude:
     - bin/**/*
     - db/schema.rb
+    - db/migrate/*.rb
 
 Rails:
   Enabled: true
