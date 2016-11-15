@@ -1,0 +1,33 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @task.title
+p
+  strong Memo:
+  = @task.memo
+p
+  strong Priority:
+  = @task.priority
+p
+  strong Estimate hour:
+  = @task.estimate_hour
+p
+  strong Actual hour:
+  = @task.actual_hour
+p
+  strong Started at:
+  = @task.started_at
+p
+  strong Finished at:
+  = @task.finished_at
+p
+  strong Status:
+  = @task.status
+p
+  strong User:
+  = @task.user
+
+= link_to 'Edit', edit_task_path(@task)
+'|
+= link_to 'Back', tasks_path
