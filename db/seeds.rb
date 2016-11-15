@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.delete_all
+User.connection.execute(%|SELECT setval ('users_id_seq', 1, false)|)
+User.create(email: 'user@example.com', password: 'password', password_confirmation: 'password')
