@@ -8,7 +8,7 @@ class CreateTasks < ActiveRecord::Migration[5.0]
       t.float :actual_hour
       t.datetime :started_at
       t.datetime :finished_at
-      t.integer :status
+      t.integer :status, default: 0, null: false, limit: 2
       t.belongs_to :user, foreign_key: true
 
       t.timestamps

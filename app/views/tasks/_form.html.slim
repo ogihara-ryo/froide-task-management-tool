@@ -29,7 +29,7 @@
     = f.datetime_select :finished_at
   .field
     = f.label :status
-    = f.number_field :status
+    = f.select :status, Task.statuses.keys
   .field
     = f.label :user_id
     = f.text_field :user_id
