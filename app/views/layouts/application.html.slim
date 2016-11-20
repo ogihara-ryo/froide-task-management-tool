@@ -9,18 +9,22 @@ html
 
   body
     header
-      nav
-        - if user_signed_in?
-          Logged in as&#32;
-          strong = current_user.email
-          br
-          = link_to 'プロフィール変更', edit_user_registration_path
-          '|
-          = link_to 'ログアウト', destroy_user_session_path, method: :delete
-        - else
-          = link_to 'サインイン', new_user_registration_path
-          '|
-          = link_to 'ログイン', new_user_session_path
+      nav.nav-wrapper
+        .container
+          = link_to 'FTMT', root_path, class: 'brand-logo'
+          ul.right.hide-on-med-and-down
+            - if user_signed_in?
+              li
+                strong = current_user.email
+
+              li = link_to 'プロフィール変更', edit_user_registration_path
+              li = link_to 'ログアウト', destroy_user_session_path, method: :delete
+            - else
+              li = link_to 'サインアップ', new_user_registration_path
+              '|
+              li = link_to 'ログイン', new_user_session_path
 
     p.notice.alert
-    == yield
+
+    .container
+      == yield
