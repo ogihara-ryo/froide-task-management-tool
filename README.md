@@ -1,24 +1,43 @@
-# README
+# Froide Task Management Tool
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
 
-Things you may want to cover:
+This software is a task management tool developed by [froide.co.jp](froide.co.jp).
 
-* Ruby version
+## Requirement
 
-* System dependencies
+- Ruby 2.3.1
+- Rails 5.0.0.1
 
-* Configuration
+It will follow the latest version
 
-* Database creation
+## Installation
 
-* Database initialization
+```console
+$ git clone git@github.com:ogihara-ryo/froide-task-management-tool.git
+```
 
-* How to run the test suite
+## Database creation
 
-* Services (job queues, cache servers, search engines, etc.)
+```console
+$ cp config/database.yml.example config/database.yml
+$ bundle install
+$ rails db:create
+$ rails db:migrate
+```
 
-* Deployment instructions
+## Preparation of test data
 
-* ...
+```console
+rails db:seed
+```
+
+## Run the test suite
+
+```console
+$ rspec spec/
+```
+
+## License
+
+[MIT License](https://github.com/ogihara-ryo/froide-task-management-tool/blob/master/LICENSE)
