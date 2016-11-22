@@ -29,7 +29,7 @@ $ rails db:migrate
 ## Preparation of test data
 
 ```console
-rails db:seed
+$ rails db:seed
 ```
 
 ## Run the test suite
